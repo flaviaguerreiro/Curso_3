@@ -12,3 +12,5 @@ st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 escala= list(range(101))
 satisfacao = st.select_slider('Satisfação do Cliente', options=escala)
 st.write(f'Valor Selecionado: {satisfacao}')
+
+#questão 4
