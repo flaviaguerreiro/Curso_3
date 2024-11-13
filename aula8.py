@@ -13,4 +13,7 @@ escala= list(range(101))
 satisfacao = st.select_slider('Satisfação do Cliente', options=escala)
 st.write(f'Valor Selecionado: {satisfacao}')
 
+satisfacao = st.slider('Satisfação do Cliente', min_value = 0, max_value = 100)
+st.text('Valor Selecionado:'+str(satisfacao))
+
 #questão 4
