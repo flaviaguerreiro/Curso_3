@@ -6,14 +6,14 @@ df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR
 
 #limpando e organizando os dados
 df.drop(columns=['Unnamed: 0'], inplace=True)
-df = df.sort_values(by='CD_UF')
+
 
 #convertendo latitude e longitude em número
 list = ['Lat_d', 'Long_d']
 df[list] =df[list].apply(pd.to_numeric, errors='coerce')
 
 #criando lista com cada estado aparecendo uma única vez
-estados = df['NM_UF'].unique()
+estados = df['NM_UF'].unique().sort()
 
 #inserindo caixa para seleção do estado 
 estado_filtro = st.selectbox('Selecione o Estado:', estados)
