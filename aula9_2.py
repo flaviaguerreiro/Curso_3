@@ -6,7 +6,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR
 
 #limpando e organizando os dados
 df.drop(columns=['Unnamed: 0'], inplace=True)
-
+df = df.sort_values(by='NM_UF')
 
 #convertendo latitude e longitude em número
 list = ['Lat_d', 'Long_d']
