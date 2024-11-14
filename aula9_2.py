@@ -12,5 +12,11 @@ df[list] =df[list].apply(pd.to_numeric, errors='coerce')
 
 #criando lista com cada estado aparecendo uma única vez
 estados = df['NM_UF'].unique()
+
 estado_filtro = st.selectbox('Selecione o Estado:', estados)
 
+dados_filtrados = df[df['NM_UF'] == estado_filtro]
+
+if st.checkbox('Mostrar Tabela'):
+  st.write(dados_filtrados)
+st.map(dados_filtrados, latitude='Lat_d', longitude='Long_d')
