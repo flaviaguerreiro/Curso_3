@@ -13,7 +13,7 @@ list = ['Lat_d', 'Long_d']
 df[list] =df[list].apply(pd.to_numeric, errors='coerce')
 
 #criando lista com cada estado aparecendo uma única vez
-estados = df['NM_UF'].unique().sort()
+estados = df['NM_UF'].unique()
 
 #inserindo caixa para seleção do estado 
 estado_filtro = st.selectbox('Selecione o Estado:', estados)
