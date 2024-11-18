@@ -1,5 +1,6 @@
 import pandas as pd
 import requests as req
+import streamlit as st
 
 #A partir dos dados abertos da camara dos deputados (https://dadosabertos.camara.leg.br/swagger/api.html) defina a URL da API com informações sobre os deputados, incluindo a informação sobre o gênero. DICA: Use a opção de deputados.
 url_homens= 'https://dadosabertos.camara.leg.br/api/v2/deputados?siglaSexo=M&ordem=ASC&ordenarPor=nome'
